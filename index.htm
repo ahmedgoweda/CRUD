@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curd</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/styal.css">
+</head>
+
+<body class="bg-black">
+ 
+    <div class="back-ground">
+        <div class="title text-center">
+            <p  class="fs-2 text-light">Stor</p>
+        </div>
+        <div class="container py-5">
+            <label for="ProductName" class="fs-4 ft-color">ProductName:</label>
+            <input type="text" class="form-control mb-3" id="ProductName">
+
+            <label for="ProductPrice" class="fs-4 ft-color ">ProductPrice:</label>
+            <inPut type="number" class="form-control mb-3" id="ProductPrice">
+
+            <label for="ProductCategory" class="fs-4 ft-color ">ProductCategory:</label>
+            <input type="text" class="form-control mb-3" id="ProductCategory">
+
+            <label for="ProductDesc" class="fs-4 ft-color">ProductDesc:</label>
+            <textarea type="text" class="form-control mb-3 " id="ProductDesc"></textarea>
+            <button ondblclick="addProduct();" class="btn btn-outline-info w-25">Add Product</button>
+
+            
+        </div>
+
+    </div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

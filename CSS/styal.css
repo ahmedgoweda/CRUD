@@ -1,0 +1,29 @@
+body{
+box-sizing: border-box;
+margin: o;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.back-ground{
+    background-image: url(/img/5172658.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.ft-color{
+    color: aliceblue;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing:10px ;
+}
+.title{
+    color: aliceblue;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing:30px ;
+    font-weight: 600;
+  }
+
+.textarea{
+    resize: none;
+}
