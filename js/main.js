@@ -16,13 +16,26 @@ function addProduct() {
     addProductContainer.push(Product);
 
 clearform();
-console.log(addProductContainer);
+displayData();
 }
  
-function clearform(){
+function clearform(){ 
  ProductNameInput.value="";
  ProductPriceInput.value="";
  ProductCategoryInput.value="";
 ProductDescInput.value="";
 }
 
+function displayData(){
+    var boxProduct="";
+    for(var i=0;i<addProductContainer.length ;i++){
+        boxProduct +=`<tr>
+        <td> ${addProductContainer[i].name}</td>
+        <td> ${addProductContainer[i].price}</td>
+        <td> ${addProductContainer[i].Category}</td>
+        <td> ${addProductContainer[i].Desc}</td>
+    </tr>`
+    }
+    document.getElementById('tabolBody').innerHTML=boxProduct;
+}
+ 
