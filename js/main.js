@@ -34,8 +34,12 @@ function displayData(){
         <td> ${addProductContainer[i].price}</td>
         <td> ${addProductContainer[i].Category}</td>
         <td> ${addProductContainer[i].Desc}</td>
+        <td><button class="btn btn-outline-warning">Update</button></td>
+        <td><button class="btn btn-outline-danger">Delete</button></td>
     </tr>`
     }
     document.getElementById('tabolBody').innerHTML=boxProduct;
 }
+
+
  
