@@ -1,11 +1,15 @@
-
+ 
 var ProductNameInput = document.getElementById('ProductName');
 var ProductPriceInput = document.getElementById('ProductPrice');
 var ProductCategoryInput = document.getElementById('ProductCategory');
 var ProductDescInput = document.getElementById('ProductDesc');
-
+var searchInput= document.getElementById('searchInput');
 var addProductContainer = [];
-
+if (localStorage.getItem("product") != null)
+{
+    addProductContainer=JSON.parse(localStorage.getItem("product"))
+    displayData();
+}
 function addProduct() {
    var  Product = {
         name: ProductNameInput.value,
@@ -14,9 +18,10 @@ function addProduct() {
         Desc: ProductDescInput.value,
     } 
     addProductContainer.push(Product);
+localStorage.setItem("product",JSON.stringify(addProductContainer));
+ displayData();
+ clearform();
 
-clearform();
-displayData();
 }
  
 function clearform(){ 
@@ -27,19 +32,45 @@ ProductDescInput.value="";
 }
 
 function displayData(){
+
     var boxProduct="";
     for(var i=0;i<addProductContainer.length ;i++){
         boxProduct +=`<tr>
-        <td> ${addProductContainer[i].name}</td>
-        <td> ${addProductContainer[i].price}</td>
-        <td> ${addProductContainer[i].Category}</td>
-        <td> ${addProductContainer[i].Desc}</td>
-        <td><button class="btn btn-outline-warning">Update</button></td>
-        <td><button class="btn btn-outline-danger">Delete</button></td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].name}</td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].price}</td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].Category}</td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].Desc}</td>
+        <td class="bg-dark"><button class="btn btn-outline-warning">Update</button></td>
+        <td onclick=deleteProduct(${i}); class="bg-dark"><button class="btn btn-outline-danger">Delete</button></td>
     </tr>`
     }
     document.getElementById('tabolBody').innerHTML=boxProduct;
 }
 
-
+function deleteProduct(ProductIndex){
+    addProductContainer.splice(ProductIndex,1);
+    localStorage.setItem("product",JSON.stringify(addProductContainer));
+    displayData();
+}
  
+function searchBroduct(){
+var term =searchInput.value;
+    var boxProduct="";
+    for(var i=0;i<addProductContainer.length ;i++){
+        if( addProductContainer[i].name.toLowerCase().includes(term.toLowerCase())){
+        boxProduct +=
+        `
+        <tr>
+        <td class="bg-dark text-white"> ${addProductContainer[i].name}</td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].price}</td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].Category}</td>
+        <td class="bg-dark text-white"> ${addProductContainer[i].Desc}</td>
+        <td class="bg-dark"><button class="btn btn-outline-warning">Update</button></td>
+        <td onclick=deleteProduct(${i}); class="bg-dark"><button class="btn btn-outline-danger">Delete</button></td>
+    </tr>`
+        }
+    }
+    console.log(boxProduct);
+    document.getElementById('tabolBody').innerHTML = boxProduct;
+}
+

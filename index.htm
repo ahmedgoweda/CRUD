@@ -5,14 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>curd</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Montserrat:ital,wght@0,300;0,400;0,800;1,800&family=Rubik+Doodle+Shadow&family=Rubik+Lines&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Montserrat:ital,wght@0,300;0,400;0,800;1,800&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Montserrat:ital,wght@0,300;0,400;0,800;1,800&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/all.min.css">
+   <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/styal.css">
 </head>
 
@@ -22,24 +17,24 @@
         <div class="title text-center">
             <p  class="fs-1 text-li">CruD System </p>
         </div>
-        <div class="container py-5">
-            <label for="ProductName" class="fs-4 ft-color">ProductName:</label>
-            <input type="text" class="form-control mb-3" id="ProductName">
+        <div class="container py-5 text-center">
+            <label for="ProductName" class="fs-4 ft-color ">ProductName</label>
+            <input type="text" class="form-control mb-3 text-center" id="ProductName">
 
-            <label for="ProductPrice" class="fs-4 ft-color ">ProductPrice:</label>
-            <inPut type="number" class="form-control mb-3" id="ProductPrice">
+            <label for="ProductPrice" class="fs-4 ft-color ">ProductPrice</label>
+            <inPut type="number" class="form-control mb-3 " id="ProductPrice">
 
-            <label for="ProductCategory" class="fs-4 ft-color ">ProductCategory:</label>
+            <label for="ProductCategory" class="fs-4 ft-color ">ProductCategory</label>
             <input type="text" class="form-control mb-3" id="ProductCategory">
 
-            <label for="ProductDesc" class="fs-4 ft-color">ProductDesc:</label>
+            <label for="ProductDesc" class="fs-4 ft-color">ProductDesc</label>
             <textarea type="text" class="form-control mb-3 " id="ProductDesc"></textarea>
-            <button ondblclick="addProduct();" class="btn btn-outline-info w-25">Add Product</button>
+            <button onclick="addProduct();" class="btn btn-outline-light w-25 end-0 ">Add Product</button>
 
             
         </div>
 <div class="input-search py-3 ">
-    <input type="search" placeholder="Search..." class="w-75 form-control mx-auto">
+    <input type="search" placeholder="Search..." oninput="searchBroduct()" id="searchInput" class="w-75 form-control mx-auto">
 </div>
 <div class="container  w-100 bg-light mt-4 rounded-3 ">
        <table class="table text-center ">
@@ -52,9 +47,6 @@
             <th>Delete</th>
         </thead>
         <tbody id="tabolBody">
-       
-            <td><button class="btn btn-outline-warning">Update</button></td>
-            <td><button class="btn btn-outline-danger">Delete</button></td>
         </tbody>
     </table>
 
@@ -62,9 +54,6 @@
  
 
     </div>
-
-
-
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
