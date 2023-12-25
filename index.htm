@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>curd</title>
-   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Montserrat:ital,wght@0,300;0,400;0,800;1,800&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
    <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/styal.css">
 </head>
 
-<body class="bg-black">
+<body class="color-bg">
  
     <div class="back-ground">
         <div class="title text-center">
@@ -19,7 +18,7 @@
         </div>
         <div class="container py-5 text-center">
             <label for="ProductName" class="fs-4 ft-color ">ProductName</label>
-            <input type="text" class="form-control mb-3 text-center" id="ProductName">
+            <input type="text" class="form-control mb-3 " id="ProductName">
 
             <label for="ProductPrice" class="fs-4 ft-color ">ProductPrice</label>
             <inPut type="number" class="form-control mb-3 " id="ProductPrice">
@@ -29,7 +28,8 @@
 
             <label for="ProductDesc" class="fs-4 ft-color">ProductDesc</label>
             <textarea type="text" class="form-control mb-3 " id="ProductDesc"></textarea>
-            <button onclick="addProduct();" class="btn btn-outline-light w-25 end-0 ">Add Product</button>
+            <button onclick="addProduct();"  id="addBtn" class="btn btn-outline-light w-25">Add Product</button>
+            <button onclick="UpdateProduct();" id="updtateBtn" class="btn btn-outline-light d-none w-25">update Product</button>
 
             
         </div>
