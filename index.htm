@@ -16,13 +16,14 @@
         <div class="title text-center">
             <p  class="fs-1 text-li">CruD System </p>
         </div>
-        <div class="container py-5 text-center">
+        <div class="container py-5 ">
             <label for="ProductName" class="fs-4 ft-color ">ProductName</label>
-            <input type="text" class="form-control mb-3 " id="ProductName">
-
+            <input type="text" oninput="validationName();" class="form-control mb-3 is-invalid" id="ProductName">
+             <div id="#massageForUser" class="alert alert-danger text-center fs-3 d-none">
+                </div>
             <label for="ProductPrice" class="fs-4 ft-color ">ProductPrice</label>
-            <inPut type="number" class="form-control mb-3 " id="ProductPrice">
-
+            <inPut type="number" oninput="validationPrice()" class="form-control mb-3 is-invalid" id="ProductPrice">
+                <div id="#massageForPrice" class="alert alert-danger text-center fs-3 d-none"></div>
             <label for="ProductCategory" class="fs-4 ft-color ">ProductCategory</label>
             <input type="text" class="form-control mb-3" id="ProductCategory">
 

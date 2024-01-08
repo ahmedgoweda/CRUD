@@ -1,29 +1,29 @@
 body{
 box-sizing: border-box;
-margin: o;
+margin:0;
 font-family: Arial, Helvetica, sans-serif;
  
 }
 
 .color-bg{
-  background-color:darkslateblue;
+  background-color:dimgray;
 }
- /* .back-ground{
-    background-image: url('/img/blue-lines-abstract-wallpaper.jpg');
+ .back-ground{
+    /* background-image: url('/img/blue-lines-abstract-wallpaper.jpg'); */
     background-position: center;
     background-size: cover;
     height: 200vh;
-}  */
+} 
 
 .ft-color{
-    color: aliceblue;
+    color:black;
   font-family: Impact,'Arial Narrow Bold', sans-serif;
   letter-spacing:10px ;
 }
 .title{
     color:blanchedalmond;
-    background-image:url("/img/dots.png");
-    font-family:inherit;
+    /* background-image:url("/img/dots.png"); */
+    /* font-family:inherit; */
     letter-spacing:30px ;
     font-weight: 600;
 
@@ -31,5 +31,8 @@ font-family: Arial, Helvetica, sans-serif;
 
 .textarea{
     resize: none;
+}
+.text-li{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
