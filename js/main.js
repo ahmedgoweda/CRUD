@@ -93,10 +93,10 @@ updtateBtn.classList.remove('d-none');
 
 function UpdateProduct( ){
     let  Product = {
-        name: ProductNameInput.getAttribute,
-        price: ProductPriceInput.getAttribute,
-        Category: ProductCategoryInput.getAttribute,
-        Desc: ProductDescInput.getAttribute,
+        name: ProductNameInput.value,
+        price: ProductPriceInput.value,
+        Category: ProductCategoryInput.value,
+        Desc: ProductDescInput.value,
    
     }
    
@@ -131,7 +131,7 @@ return false;
 let massageForPrice=document.getElementById("#massageForPrice");
 function validationPrice(){
 let test=ProductPriceInput.value;
-let regexPrice=/^[1-10]{5}$/;
+let regexPrice=/^[1-20]{6}$/;
 if(regexPrice.test(test)==true){
     ProductPriceInput.classList.add("is-valid");
     ProductPriceInput.classList.remove("is-invalid");

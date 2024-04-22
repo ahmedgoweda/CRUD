@@ -4,56 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>curd</title>
+    <title>Curd</title>
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
-   <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/styal.css">
 </head>
 
-<body class="color-bg">
- 
+<body class="color-bg container">
+
     <div class="back-ground">
         <div class="title text-center">
-            <p  class="fs-1 text-li">CruD System </p>
+            <p class="fs-1 text-li">CruD System </p>
         </div>
         <div class="container py-5 ">
             <label for="ProductName" class="fs-4 ft-color ">ProductName</label>
             <input type="text" oninput="validationName();" class="form-control mb-3 is-invalid" id="ProductName">
-             <div id="#massageForUser" class="alert alert-danger text-center fs-3 d-none">
-                </div>
+            <div id="#massageForUser" class="alert alert-danger text-center fs-3 d-none">
+            </div>
             <label for="ProductPrice" class="fs-4 ft-color ">ProductPrice</label>
             <inPut type="number" oninput="validationPrice()" class="form-control mb-3 is-invalid" id="ProductPrice">
-                <div id="#massageForPrice" class="alert alert-danger text-center fs-3 d-none"></div>
+            <div id="#massageForPrice" class="alert alert-danger text-center fs-3 d-none"></div>
             <label for="ProductCategory" class="fs-4 ft-color ">ProductCategory</label>
             <input type="text" class="form-control mb-3" id="ProductCategory">
 
             <label for="ProductDesc" class="fs-4 ft-color">ProductDesc</label>
             <textarea type="text" class="form-control mb-3 " id="ProductDesc"></textarea>
-            <button onclick="addProduct();"  id="addBtn" class="btn btn-outline-light w-25">Add Product</button>
-            <button onclick="UpdateProduct();" id="updtateBtn" class="btn btn-outline-light d-none w-25">update Product</button>
-
-            
+            <button onclick="addProduct();" id="addBtn" class="btn btn-outline-light w-25 button">Add Product</button>
+            <button onclick="UpdateProduct();" id="updtateBtn" class="btn btn-outline-light d-none w-25">update
+                Product</button>
         </div>
-<div class="input-search py-3 ">
-    <input type="search" placeholder="Search..." oninput="searchBroduct()" id="searchInput" class="w-75 form-control mx-auto">
-</div>
-<div class="container  w-100 bg-light mt-4 rounded-3 ">
-       <table class="table text-center ">
-        <thead>
-            <th>Name</th>
-            <th>praice</th>
-            <th>catogry</th>
-            <th>Desc</th>
-            <th>Update</th>
-            <th>Delete</th>
-        </thead>
-        <tbody id="tabolBody">
-        </tbody>
-    </table>
-
-</div>
- 
-
+        <div class="input-search py-3 ">
+            <input type="search" placeholder="Search..." oninput="searchBroduct()" id="searchInput"
+                class="w-75 form-control mx-auto">
+        </div>
+        <div class="container  w-100 bg-light mt-4 rounded-3 ">
+            <table class="table text-center ">
+                <thead>
+                    <th>Name</th>
+                    <th>praice</th>
+                    <th>catogry</th>
+                    <th>Desc</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tabolBody">
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
